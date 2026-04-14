@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-container">
+        <section id="professor-area">
+            <figure id="professor-sprite" class="pose-inicial"></figure>
+            <article class="balao-dialogo">
+                <p id="fala-professor">Olá! Sou o ** **. Vamos aplicar a matemática hoje? Escolha um desafio:</p>
+            </article>
+        </section>
+
+        <section id="interacao-area">
+            <nav id="menu-opcoes">
+                <button onclick="mudarCena('booleana')">Álgebra Booleana</button>
+                <button onclick="mudarCena('calculo')">Resolver Expressão</button>
+            </nav>
+
+            <form id="form-calculo" class="escondido">
+                <article id="resumo-teoria" class="estilizacao-texto"></article>
+                <div id="inputs-dinamicos" class="inputs-dinamicos-style"></div>
+                <output id="resultado-matematico"></output>
+                <button type="button" class="btn-voltar" onclick="resetar()">Voltar ao início</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

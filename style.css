@@ -1,0 +1,192 @@
+/*variáveis:*/
+:root{
+    --primary: #4a90e2;
+    --accent: #ff7e5f;
+    --bg-color: #f8f9fa;
+    --text-dark: #2d3436;
+}
+
+/*Configurações gerais*/
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./imagens/background-img.webp);
+    color: var(--text-dark);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-container{
+    width: 90%;
+    max-width: 900px;
+    display: flex;
+    gap: 20px;
+}
+
+/*Animação do professor*/
+
+#professor-sprite{
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+     /*renderização estilo pixel*/
+     image-rendering: pixelated;
+     /*configurações da imagem de fundo*/
+     background-size: auto 100%;
+     background-repeat: no-repeat;
+     background-position: center;
+     /*animação de transição suave para as outras mudanças*/
+    transition: all 0.4s ease-out;
+}
+
+
+/*Definição da imagem para cada classe adicionada via javascript quando mudar de página*/
+.pose-inicial{
+    background-image: url(./imagens/professor-poses/pose-inicial.png);
+    /*Efeito de "mover para o lado" na passagem da pagina*/
+    transform: translateX(-50px) scale(0.95);
+    animation: entrar 1.2s ease-out;
+}
+
+.pose-neutra{
+    background-image: url(./imagens/professor-poses/pose-neutra.png);
+    /*Efeito de "mover para o lado" na passagem da pagina*/
+    transform: translateX(-50px) scale(0.95);
+}
+
+.pose-explicando{
+    background-image: url(./imagens/professor-poses/pose-explicando.png);
+    /*Efeito de "mudar para o lado" na passagem de pagina*/
+    transform: translateX(-50px) scale(0.95);
+}
+
+.pose-calculando {
+    background-image: url(./imagens/professor-poses/pose-calculo.png);
+    transform: scale(1.05); /* Leve zoom de foco */
+}
+
+.pose-sucesso {
+    background-image: url(./imagens/professor-poses/pose-sucesso.png);
+    animation: pular 0.5s ease infinite alternate; /* Animação de pulo! */
+}
+
+.pose-triste{
+    background-image: url(./imagens/professor-poses/pose-triste.png);
+    transform: scale(0.95); /*Leve zoom*/
+}
+
+.pose-neutra{
+    background-image: url(./imagens/professor-poses/pose-neutra.png);
+    transform: scale(0.95); /*Leve zoom*/
+}
+
+/*Animação ao entrar na página*/
+@keyframes entrar{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*animação de pular*/
+@keyframes pular{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-60px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.balao-dialogo{
+    background: lightgray;
+    padding: 0.5rem 1.5rem;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/*Estiliza os inputs dinamicos*/
+.inputs-dinamicos-style{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*Estilização do texto*/
+.estilizacao-texto{
+
+}
+
+/*Esconder/Mostrar elementos*/
+.escondido{
+    display: none;
+}
+
+/*Estiliza todo o forms*/
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/*estilização dos botoes*/
+button{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: filter 0.2s;
+    margin: 5px;
+}
+
+button:hover{ filter: brightness(1.3)}
+
+button.btn-voltar{
+    width: 150px;
+}
+
+button.btn-tentar-novamente-style{
+    width: 200px;
+    height: auto;
+    background-color: #ff7e5f;
+}
+
+button.btn-calcular{
+    width: 200px;
+    height: auto;
+}
+
+/*Edita os Inputs para inserir valores A e B nos exercicios de álgebra booleana*/
+#valA, #valB{
+    width: 50px;
+    height: 30px;
+    padding: 2px 0;
+    font-size: 14px;
+    border: 2px solid var(--text-dark);
+    border-radius: 5px;
+    text-align: center;
+}
+
+/*Edita o output (valores de saida)*/
+#resultado-matematico{
+    font-size: 15px;
+    font-weight: 600;
+    color: orangered;
+}
