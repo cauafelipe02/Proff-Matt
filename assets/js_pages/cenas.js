@@ -12,7 +12,7 @@ export function mudarBooleana() {
 
     // Insere o resumo grande sobre o conteúdo:
     UI.resumo.innerHTML = `
-        <article style="background-color: lightgrey; padding: 5px 30px 10px 30px; text-align: justify; border-radius: 7px;">
+        <article class="estilizacao-texto">
             <h2>Álgebra Booleana</h2>
             <p>Na álgebra booleana, operamos com proposições (sentenças que só podem ser verdadeiras ou falsas). Os conectores lógicos são funções que combinam essas proposições para gerar um resultado final, os principais conectores são:</p>
             <p>1. Conector AND (E / . ) - Interseção: funciona como um circuito em série, ou seja, se o interruptor falhar, a luz não ascende. Com esse operador, o resultado só é verdadeiro (TRUE) se todas as entradas forem verdadeiras.
@@ -46,7 +46,7 @@ export function mudarConjunto() {
     UI.appContainer.style.alignItems = "center";
     UI.balaoFala.style.marginRight = "20px";
     UI.resumo.innerHTML = ` 
-        <article style="background-color: lightgrey; padding: 5px 30px 10px 30px; text-align: justify; border-radius: 7px;">
+        <article class="estilizacao-texto">
             <h2>Teoria de Conjuntos</h2>
                 <p>Um conjunto é uma coleção de objetos distintos, chamados de elementos, ex: listas. Na computação,
                 tratamos conjuntos como estruturas de dados, onde a noção de “pertinência” indica se um elemento faz 
@@ -69,7 +69,7 @@ export function mudarFuncoes() {
     prepararCena('pose-explicando', "Agora vamos estudar sobre Funções!");
 
     UI.resumo.innerHTML = ` 
-        <article style="background-color: lightgrey; padding: 15px; border-radius: 5px;">
+        <article class="estilizacao-texto">
             <h2>Funções Matemáticas</h2>
             <p>Inserir resummo....</p>
         </article>
@@ -85,9 +85,9 @@ export function mudarFuncoes() {
 export function mudarCalculo() {
     prepararCena('pose-calculando', "Vamos resolver algumas questões?");
 
-    UI.resumo.innerHTML = `<p style="font-weight: 600;">Informe a seguir a operação que deseja realizar:</p>`;
-
+    UI.resumo.classList.add('escondido'); // Esconde o resumo, pois nessa cena não é necessário
     UI.inputs.innerHTML = `
+        <p style="font-weight: 600;">Informe a seguir a operação que deseja realizar:</p>
         <div class="coluna-opcoes">
             <input type="radio" id="soma" name="operacao" value="soma">
                 <label for="soma">Soma</label>

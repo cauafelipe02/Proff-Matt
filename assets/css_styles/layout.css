@@ -6,11 +6,12 @@
     display: flex;
     gap: 0px;
     margin: 20px 0px 20px 0px;
+    justify-content: center;
 }
 
 .balao-dialogo{
     background: lightgray;
-    padding: 0.5rem 1.5rem;
+    padding: 0.8rem 1.5rem;
 
     border-radius: 15px;
     position: relative;

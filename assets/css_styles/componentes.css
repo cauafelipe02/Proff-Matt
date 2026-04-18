@@ -29,10 +29,17 @@
     margin-right: -5px;
 }
 
-/*Estilização do texto*/
+/*Estilização do texto e dos artigos*/
 .estilizacao-texto{
     color: var(--text-dark);
-    padding: 0px 10px;
+    background-color: lightgrey; 
+    padding: 15px 20px; 
+    text-align: justify; 
+    border-radius: 7px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 /*estilização dos botoes*/

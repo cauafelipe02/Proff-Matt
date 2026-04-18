@@ -11,13 +11,18 @@
 /*Configurações gerais*/
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body{
     background-image: url(./../imagens/background-img.webp);
+    background-size: cover;
+    background-attachment: fixed;
     color: var(--text-dark);
     font-family: 'Segoe UI', system-ui, sans-serif;
     margin: 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
