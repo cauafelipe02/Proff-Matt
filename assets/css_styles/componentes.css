@@ -30,6 +30,10 @@
 }
 
 /*Estilização do texto e dos artigos*/
+#resumo-teoria{
+    margin: 0px 30px;
+}
+
 .estilizacao-texto{
     color: var(--text-dark);
     background-color: lightgrey; 
@@ -73,7 +77,7 @@ button.btn-js{
 }
 
 /*Edita os Inputs para inserir valores A e B nos exercicios de álgebra booleana*/
-#valA, #valB{
+#valA, #valB, #valC{
     width: 65px;
     height: 30px;
     padding: 2px 0;

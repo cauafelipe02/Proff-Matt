@@ -71,7 +71,22 @@ export function mudarFuncoes() {
     UI.resumo.innerHTML = ` 
         <article class="estilizacao-texto">
             <h2>Funções Matemáticas</h2>
-            <p>Inserir resummo....</p>
+            <p>As funções matemáticas são o alicerce da computação, servindo tanto para a construção de algoritmos simples quanto para a garantia de integridade em sistemas complexos. 
+            Na programação, essas funções são abstraídas em bibliotecas como o objeto Math do JavaScript, permitindo que o hardware processe cálculos de alta precisão de forma eficiente.</p>
+
+            <p>- Aritmética e Operadores Binários: A computação baseia-se na aritmética binária para realizar todas as suas operações internas. 
+            Funções de resto (módulo %) são essenciais para determinar paridade, controlar ciclos em estruturas de repetição e distribuir dados em tabelas de dispersão (Hash Tables).</p>
+            <p>- Álgebra Booleana: Fundamental para a lógica de programação e arquitetura de hardware. Através de funções lógicas (AND, OR, NOT, XOR), 
+            o computador toma decisões, valida permissões de acesso e processa fluxos de controle em qualquer software.</p>
+            <p>- Geometria Analítica e Trigonometria: Aplicadas intensamente no desenvolvimento de interfaces gráficas, jogos e processamento de imagens. 
+            Funções como seno e cosseno (Math.sin, Math.cos) são usadas para calcular rotações, trajetórias de objetos e a renderização de elementos 
+            visuais em diferentes resoluções.</p>
+            <p>- Criptografia e Funções Exponenciais: A segurança da informação depende de funções matemáticas complexas, como exponenciação modular e logaritmos discretos. 
+            A dificuldade de reverter essas funções garante que senhas e dados sensíveis permaneçam protegidos contra ataques de força bruta.</p>
+            <p>- Análise de Algoritmos (Notação Big O): A matemática é usada para medir a eficiência de um código. Através de funções lineares, logarítmicas ou quadráticas, 
+            os desenvolvedores conseguem prever como o tempo de execução e o consumo de memória de um sistema crescerão conforme o volume de dados aumenta.</p>
+            <p>- Estatística e Probabilidade: Essenciais na computação moderna para o desenvolvimento de Inteligência Artificial e Machine Learning. 
+            Funções estatísticas permitem que sistemas identifiquem padrões, filtrem spans e tomem decisões preditivas baseadas em grandes conjuntos de dados históricos.</p>
         </article>
     `;
 

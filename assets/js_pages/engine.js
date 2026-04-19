@@ -75,6 +75,7 @@ export function criarBotaoTentarNovamente() {
 export function tentarNovamente() {
     document.getElementById('valA').value = "";
     document.getElementById('valB').value = "";
+    document.getElementById('valC').value = "";
     UI.resultado.innerText = "";
 
     UI.sprite.className = 'pose-inicial';

@@ -1,12 +1,15 @@
 // Guarda as diferentes cenas do site, cada função é responsável por configurar a cena de um conteúdo específico
 import {UI} from './UI.js';
 import {prepararCena, voltarCalculo} from './engine.js';
-import { calcularSoma } from './formulas.js';
+import { calcularSoma, 
+    calcularSubtracao, 
+    calcularMultiplicacao, 
+    calcularDivisao,
+    calcularExpressao } from './formulas.js';
 
 export function fazerSoma() {
     prepararCena('pose-inicial', "Beleza, vamos somar!!");
 
-    UI.resumo.innerHTML = `<p style="font-weight: 600;">Vamos realizar algumas somas:</p>`;
     UI.inputs.innerHTML = `
         <div style="display: flex; gap: 10px; align-items: center;">
             <label style="font-weight: 500; ">Insira os números:</label>
@@ -25,8 +28,17 @@ export function fazerSoma() {
 export function fazerSubtracao() {
     prepararCena('pose-inicial', "Beleza, vamos subtrair!!");
 
-    UI.resumo.innerHTML = `<p style="font-weight: 600;">Informe os números que deseja subtrair:</p>`;
-    UI.inputs.innerHTML = ``;
+    UI.inputs.innerHTML = `
+        <div style="display: flex; gap: 10px; align-items: center;">
+            <label style="font-weight: 500; ">Insira os números:</label>
+            <input type="number" id="valA" placeholder="a">
+            <input type="number" id="valB" placeholder="b">
+            <button type="button" class="btn-js" id="btn-subtrair">Subtrair</button>
+        </div>
+    `;
+
+    document.getElementById('btn-subtrair')
+        .addEventListener('click', calcularSubtracao);
 
     voltarCalculo();
 }
@@ -34,8 +46,17 @@ export function fazerSubtracao() {
 export function fazerMultiplicacao() {
     prepararCena('pose-inicial', "Beleza, vamos multiplicar!!");
 
-    UI.resumo.innerHTML = `<p style="font-weight: 600;">Informe os números que deseja multiplicar:</p>`;
-    UI.inputs.innerHTML = ``;
+    UI.inputs.innerHTML = `
+        <div style="display: flex; gap: 10px; align-items: center;">
+            <label style="font-weight: 500; ">Insira os números:</label>
+            <input type="number" id="valA" placeholder="a">
+            <input type="number" id="valB" placeholder="b">
+            <button type="button" class="btn-js" id="btn-multiplicar">Multiplicar</button>
+        </div>
+    `;
+
+    document.getElementById('btn-multiplicar')
+        .addEventListener('click', calcularMultiplicacao);
 
     voltarCalculo();
 }
@@ -43,8 +64,17 @@ export function fazerMultiplicacao() {
 export function fazerDivisao() {
     prepararCena('pose-inicial', "Beleza, vamos dividir!!");
 
-    UI.resumo.innerHTML = `<p style="font-weight: 600;">Informe os números que deseja dividir:</p>`;
-    UI.inputs.innerHTML = ``;
+    UI.inputs.innerHTML = `
+        <div style="display: flex; gap: 10px; align-items: center;">
+            <label style="font-weight: 500; ">Insira os números:</label>
+            <input type="number" id="valA" placeholder="a">
+            <input type="number" id="valB" placeholder="b">
+            <button type="button" class="btn-js" id="btn-dividir">Dividir</button>
+        </div>
+    `;
+
+    document.getElementById('btn-dividir')
+        .addEventListener('click', calcularDivisao);
 
     voltarCalculo();
 }
@@ -52,8 +82,18 @@ export function fazerDivisao() {
 export function fazerExpressao() {
     prepararCena('pose-inicial', "Beleza, vamos resolver uma expressão!");
 
-    UI.resumo.innerHTML = `<p style="font-weight: 600;">Informe os números da expressão:</p>`;
-    UI.inputs.innerHTML = ``;
+    UI.inputs.innerHTML = `
+        <div style="display: flex; gap: 10px; align-items: center;">
+            <label style="font-weight: 500; ">Insira os números:</label>
+            <input type="number" id="valA" placeholder="a">
+            <input type="number" id="valB" placeholder="b">
+            <input type="number" id="valC" placeholder="c">
+            <button type="button" class="btn-js" id="btn-expressao">Resolver</button>
+        </div>
+    `;
+
+    document.getElementById('btn-expressao')
+        .addEventListener('click', calcularExpressao);
 
     voltarCalculo();
 }
